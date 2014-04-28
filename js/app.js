@@ -22,6 +22,6 @@ function resizeHeading($windowWidth){
 		$heading.css('font-size',$avatar.outerHeight()*.7);
 	}
 	else{
-		$heading.css('font-size',80);
+		$heading.css('font-size',70);
 	}
 }

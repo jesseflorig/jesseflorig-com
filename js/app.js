@@ -1,9 +1,4 @@
 $(document).ready(function(){
-	$('.js-current-year').html(function(){
-		var $currentYear = new Date().getFullYear();
-		return $currentYear;
-	});
-
 	$(window).resize(function(){
 		resizeHeading($(this).width());
 	});
@@ -14,6 +9,7 @@ $(window).load(function(){
 	resizeHeading($(window).width());
 });
 
+// keeps the avatar and title heading responsive and well-formed
 function resizeHeading($windowWidth){
 	var $avatar = $('.avatar');
 	var $heading = $('.title-heading');

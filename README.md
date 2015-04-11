@@ -1,6 +1,6 @@
 # [Jesse Florig](http://jesseflorig.com)
 
-Designed to be a clean & lightweight landing page for everything relevant to my career as a software engineer and web developer, all while implementing current best practices.
+Designed to be a clean & lightweight landing page to showcase my career  accomplishments as a software engineer and web developer.
 
 ## Technologies
 
@@ -13,5 +13,5 @@ Designed to be a clean & lightweight landing page for everything relevant to my 
 ## To Do
 
  - Host via [GitHub Pages](https://github.com/)
- - [HTML5 Boilerplate](http://html5boilerplate.com/)
- - [Less](http://lesscss.org/) or [Sass](http://sass-lang.com/) integration
+ - [Stylus](https://learnboost.github.io/stylus/) integration
+ - [Coffeescript](http://coffeescript.org/) integration

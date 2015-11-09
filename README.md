@@ -1,4 +1,4 @@
-# [Jesse Florig](http://jesseflorig.com)
+# [Jesse Florig](http://jesseflorig.github.io)
 
 Designed to be a clean & lightweight landing page to showcase my career accomplishments as a software engineer.
 
@@ -11,4 +11,4 @@ Designed to be a clean & lightweight landing page to showcase my career accompli
 
 ## To Do
 
- - [ ] Host via [GitHub Pages](https://github.com/)
+ - [x] Host via [GitHub Pages](https://pages.github.com/)

@@ -49,6 +49,7 @@ a {
 }
 
 .grid-container {
+  height: minmax(50vh, 70vh);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3fr 1fr 2fr 1fr;
@@ -122,6 +123,7 @@ a {
 
 .link-list,
 .footer-list {
+  margin: 0;
   list-style: none;
   padding-left: 0;
   text-align: center;

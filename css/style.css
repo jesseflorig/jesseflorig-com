@@ -2,76 +2,132 @@ html,
 body {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
+  display: grid;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
   font-family: 'Oswald', sans-serif;
   font-weight: 300;
+  background-color: #fefefe;
+  color: #ccc;
+}
+
+a {
+  text-decoration: none;
   color: #aaa;
+  transition: color .5s ease-in-out;
 }
 
-.content-container { max-width: 50%; }
-
-header { display: flex; }
-
-.avatar {
-  width:20%;
-  position: relative;
+[title="Twitter"]:hover {
+  color: rgb(85,172,238);
 }
 
-.avatar>img {
-  height:100%;
-  width: 100%;
-  border-radius: 50%;
-  padding: 2px;
-  border: 2px dotted #aaa;
+[title="GitHub"]:hover {
+  color: rgb(114,49,132);
 }
 
-.title>h1 {
-  margin-top: 0;
-  margin-left: 1vw;
-  font-weight: 400;
-  font-size: 9vw;
+[title="StackOverflow"]:hover {
+  color: rgb(241,99,3);
+}
+
+[title="LinkedIn"]:hover {
+  color: rgb(0,119,181);
+}
+
+[title="Resume"]:hover {
+  color: rgb(178,36,52);
+}
+
+[title="Location"]:hover,
+[title="Source"]:hover,
+[title="Contact"]:hover {
+  color: #444;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 2fr 1fr;
+  grid-template-areas:
+    "title"
+    "subtitle"
+    "nav"
+    "footer";
+  justify-items: center;
+  align-items: center;
+}
+
+.title {
+  grid-area: title;
+  font-size: 14vw;
+  margin: 0;
+  line-height: 100%;
   text-align: center;
-  text-shadow: 2px 2px 0 #fff, 4px 4px 0 #ddd;
+  color: #aaa;
+  text-transform: uppercase;
+  padding: .2em;
+  border-radius: .2em;
+  transition: color 1s ease-in-out;
+}
+
+.title:hover {
+  cursor: not-allowed;
+  color: white;
+  background: linear-gradient(90deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1000% 100%;
+  animation: rainbow 10s linear infinite alternate;
+}
+
+@keyframes rainbow {
+    0%{background-position:0%}
+    100%{background-position:100%}
 }
 
 .subtitle {
+  grid-area: subtitle;
+  font-size: 3vw;
+  margin: 0;
   text-align: center;
-  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2vw;
 }
 
 .nav {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  grid-area: nav;
 }
 
-.nav li { font-size: 2rem; }
-
-footer { text-align: center; }
-
-@media(max-width: 991px) {
-	
-  header { flex-direction: column; }
-
-  .avatar {
-    margin-left: 20%;
-    width: 60%;
-  }
-
-  .title>h1 { font-size: 11vw; }
-
-  footer>div { margin: 1rem; }
-  
+.link-list {
+  font-size: 4vw;
 }
 
-@media(max-width: 767px) {
-	
-  body{ align-items: flex-start; }
-  
-  .content-container { margin-top: 1em; }
-  
+.link-list li:not(:last-child) {
+  margin-right: 2vw;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.footer-list {
+  font-size: 1.5vw;
+}
+
+.footer-list li:not(:last-child) {
+  margin-right: 10vw;
+}
+
+.link-list,
+.footer-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+.link-list li,
+.footer-list li {
+  display: inline;
 }

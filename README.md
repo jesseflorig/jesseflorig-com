@@ -1,14 +1,11 @@
 # [Jesse Florig](http://jesseflorig.github.io)
 
-Designed to be a clean & responsive landing page to showcase my career accomplishments .
+Designed to be a clean & responsive landing page for aggregating my relevant presence online.
 
 ## Technologies
 
  - [HTML5](http://www.w3.org/TR/html5/)
  - [CSS](http://www.w3.org/Style/CSS/current-work)
- - [Bootstrap](http://getbootstrap.com/) *via CDN*
- - [Font Awesome](http://fontawesome.io/) *via CDN*
-
-## To-Do
-
- - [x] Host via [GitHub Pages](https://pages.github.com/)
+ - [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)
+ - [Google Font API](https://fonts.google.com/)
+ - [GitHub Pages](https://pages.github.com/)

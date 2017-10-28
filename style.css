@@ -11,14 +11,15 @@ body {
   justify-items: center;
   align-items: center;
   font-family: 'Oswald', sans-serif;
-  font-weight: 300;
-  background-color: #fefefe;
-  color: #ccc;
+  font-size: 2vw;
+  font-weight: 400;
+  background-color: #fdfdfd;
+  color: #444;
 }
 
 a {
   text-decoration: none;
-  color: #aaa;
+  color: #444;
   transition: color .5s ease-in-out;
 }
 
@@ -45,7 +46,7 @@ a {
 [title="Location"]:hover,
 [title="Source"]:hover,
 [title="Contact"]:hover {
-  color: #444;
+  color: #999;
 }
 
 .grid-container {
@@ -64,24 +65,24 @@ a {
 
 .title {
   grid-area: title;
-  font-size: 14vw;
+  font-size: 8em;
+  font-weight: 700;
   margin: 0;
   line-height: 100%;
   text-align: center;
-  color: #aaa;
   text-transform: uppercase;
-  padding: .2em;
-  border-radius: .2em;
-  transition: color 1s ease-in-out;
+  letter-spacing: -.05em;
 }
 
 .subtitle {
   grid-area: subtitle;
-  font-size: 3vw;
+  font-size: 1.25em;
+  font-weight: 300;
   margin: 0;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 2vw;
+  letter-spacing: 1em;
+  margin-right: -.5em /* half of letter-spacing */
 }
 
 .nav {
@@ -89,23 +90,26 @@ a {
 }
 
 .link-list {
-  font-size: 4vw;
+  font-size: 1.8em;
 }
 
 .link-list li:not(:last-child) {
-  margin-right: 2vw;
+  margin-right: 1em;
 }
 
 .footer {
   grid-area: footer;
+  font-weight: 300;
+  margin-right: -.25em;
 }
 
 .footer-list {
-  font-size: 1.5vw;
+  font-size: .75em;
+  letter-spacing: .4em;
 }
 
 .footer-list li:not(:last-child) {
-  margin-right: 10vw;
+  margin-right: 11em;
 }
 
 .link-list,

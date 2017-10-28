@@ -1,6 +1,6 @@
 # [Jesse Florig](http://jesseflorig.github.io)
 
-Designed to be a clean & responsive landing page for aggregating my relevant presence online.
+Designed to be a clean & responsive landing page for hosting my resume and aggregating my online portfolio.
 
 ## Technologies
 

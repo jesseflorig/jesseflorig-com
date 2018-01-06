@@ -10,7 +10,7 @@ Designed to be a clean & responsive landing page for hosting my resume & aggrega
    - [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid)
  - [Google Font API](https://fonts.google.com/)
 
-*this page intentionally excludes JavaScript, plrease refer to [my GitHub account](https://github.com/jesseflorig) for more projects*
+*this page intentionally excludes JavaScript, please refer to [my GitHub account](https://github.com/jesseflorig) for more projects*
 
 ## To do
 

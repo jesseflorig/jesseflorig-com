@@ -11,22 +11,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-size: 1em;
   font-family: "Oswald", sans-serif;
   text-align: center;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.7);
   background-color: rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease-in;
 }
 
 header {
-  padding: 1em 1em 0;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  padding: 1em 0 0;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 0.7em;
+  font-size: 0.6em;
   font-weight: 300;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.6em;
   color: rgba(0,0,0,0.4);
 }
 
@@ -35,6 +37,7 @@ nav {
   flex-grow: 1;
   padding: 1em;;
   display: flex;
+  font-size: 1em;
 }
 
 nav ul {
@@ -53,13 +56,15 @@ nav li:not(:last-of-type) {
 }
 
 a {
-  color: rgba(0,0,0,0.4);
+  color: rgba(0,0,0,0.6);
   text-decoration: none;
+  text-shadow: 0, 0, 0, rgba(0,0,0,0);
   transition: color .5s ease-in-out;
 }
 
 a:hover {
   color: rgba(0,0,0,0.6);
+  animation-play-state: running;
 }
 
 a[title="Twitter"]:hover {
@@ -83,9 +88,10 @@ a[title="Resume"]:hover {
 }
 
 footer {
-  padding: 1em 1.5em;
   font-size: 0.8em;
   font-weight: 300;
+  letter-spacing: .1em;
+  padding: 1em 1.5em;
 }
 
 footer a {
@@ -97,12 +103,29 @@ footer ul {
   justify-content: space-between;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* Larger views  */
 @media (min-width: 38em) {
   body {
     max-height: 100vh;
     align-items: center;
     justify-content: center;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 0.65em;
   }
 
   nav {
@@ -115,6 +138,7 @@ footer ul {
   }
 
   nav li {
+    padding: 2.4em 0.4em;
     background-color: transparent;
   }
 
@@ -122,7 +146,8 @@ footer ul {
     margin-bottom: 0;
   }
   footer {
-    width: 20em;
+    width: 24em;
+    padding: 0;
   }
 }
 

@@ -1,126 +1,139 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
+/* Deafault layout targets portrait mode devices */
+
+* {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 body {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  font-family: 'Oswald', sans-serif;
-  font-size: 2vw;
-  font-weight: 400;
-  background-color: #fdfdfd;
-  color: #444;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.1);
+}
+
+header {
+  padding: 1em 1em 0;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 0.7em;
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  color: rgba(0,0,0,0.4);
+}
+
+
+nav {
+  flex-grow: 1;
+  padding: 1em;;
+  display: flex;
+}
+
+nav ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+nav li {
+  padding: 1em;
+  background-color: rgba(0,0,0,0.1);
+}
+
+nav li:not(:last-of-type) {
+  margin-bottom: 1em;
 }
 
 a {
+  color: rgba(0,0,0,0.4);
   text-decoration: none;
-  color: #444;
   transition: color .5s ease-in-out;
 }
 
-[title="Twitter"]:hover {
+a:hover {
+  color: rgba(0,0,0,0.6);
+}
+
+a[title="Twitter"]:hover {
   color: rgb(85,172,238);
 }
 
-[title="GitHub"]:hover {
+a[title="GitHub"]:hover {
   color: rgb(114,49,132);
 }
 
-[title="StackOverflow"]:hover {
+a[title="StackOverflow"]:hover {
   color: rgb(241,99,3);
 }
 
-[title="LinkedIn"]:hover {
+a[title="LinkedIn"]:hover {
   color: rgb(0,119,181);
 }
 
-[title="Resume"]:hover {
+a[title="Resume"]:hover {
   color: rgb(178,36,52);
 }
 
-[title="Location"]:hover,
-[title="Source"]:hover,
-[title="Contact"]:hover {
-  color: #999;
-}
-
-.grid-container {
-  height: minmax(50vh, 70vh);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 3fr 1fr 2fr 1fr;
-  grid-template-areas:
-    "title"
-    "subtitle"
-    "nav"
-    "footer";
-  justify-items: center;
-  align-items: center;
-}
-
-.title {
-  grid-area: title;
-  font-size: 8em;
-  font-weight: 700;
-  margin: 0;
-  line-height: 100%;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: -.05em;
-}
-
-.subtitle {
-  grid-area: subtitle;
-  font-size: 1.25em;
+footer {
+  padding: 1em 1.5em;
+  font-size: 0.8em;
   font-weight: 300;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1em;
-  margin-right: -.5em /* half of letter-spacing */
 }
 
-.nav {
-  grid-area: nav;
+footer a {
+  color: rgba(0,0,0,0.4);
 }
 
-.link-list {
-  font-size: 1.8em;
+footer ul {
+  display: flex;
+  justify-content: space-between;
 }
 
-.link-list li:not(:last-child) {
-  margin-right: 1em;
+/* Larger views  */
+@media (min-width: 38em) {
+  body {
+    max-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    flex-grow: 0;
+    padding: 0;
+  }
+
+  nav ul {
+    flex-direction: row;
+  }
+
+  nav li {
+    background-color: transparent;
+  }
+
+  nav li:not(:last-of-type) {
+    margin-bottom: 0;
+  }
+  footer {
+    width: 20em;
+  }
 }
 
-.footer {
-  grid-area: footer;
-  font-weight: 300;
-  margin-right: -.25em;
+@media (min-width: 38em) and (orientation: landscape){
+  body {
+    font-size: 4vh;
+  }
 }
 
-.footer-list {
-  font-size: .75em;
-  letter-spacing: .4em;
-}
-
-.footer-list li:not(:last-child) {
-  margin-right: 11em;
-}
-
-.link-list,
-.footer-list {
-  margin: 0;
-  list-style: none;
-  padding-left: 0;
-  text-align: center;
-}
-
-.link-list li,
-.footer-list li {
-  display: inline;
+@media (min-width: 38em) and (orientation: portrait){
+  body {
+    font-size: 3vw;
+  }
 }
